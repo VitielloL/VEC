@@ -4,6 +4,44 @@
   box-sizing: border-box;
 }
 
+
+/* Nav */
+.nav-header {
+  width: 100%;
+  height: 10%;
+}
+
+.nav-header .header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #203644;
+}
+
+.nav-header .header .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-header .header .nav-links a {
+  color: whitesmoke;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 15px;
+}
+
+.nav-icon {
+  width: 30px;
+}
+.imgLogo{
+  width: 90px;
+}
+/*--------------------------------*/
+
+/* main */
 .main-container {
     min-height: 90%;
     display: flex;
@@ -19,16 +57,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    /* width: 80%; */
     gap: 7rem;
+    /* aumentei o gap e removi o width para ajudar a centralizar o bloco principal */
+    /* width: 80%; */
     /* gap: 5rem; */
 }
 
-/* .project-img{
-  width: 350px; 
-  height: 220px;
-  opacity: .8;
-} */
+.project-img{
+  width: 100%; 
+  /*ideal é ja entrar com uma img do tamanho igual as outras*/
+}
+
+.project-h1{
+  color: rgb(29, 55, 110);
+}
 
 .project-container {
   display: flex;
@@ -43,17 +85,20 @@
   color: #867878;
 }
 
+.text-project {
+  font-family: Arial;
+  color: rgb(77, 136, 192);
+}
+/*--------------------------------*/
+
 @media screen and (max-width: 1440px) {
   .page-projects {
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
   }
 }
-@media screen and (max-width: 1024px) {
-    .col-4{
-    width:33%
-  }
-}
+@media screen and (max-width: 1024px) {}
+
 @media screen and (max-width: 600px) {
   .project-container {
     width: 100%;
@@ -62,5 +107,20 @@
   .page-projects {
     width: 80%;
     grid-template-columns: 1fr;
+  }
+
+  .nav-header .header .nav-links a {
+    color: whitesmoke;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px;
+  }
+  
+  .nav-icon {
+    width: 20px;
+  }
+
+  .imgLogo{
+    width: 50px;
   }
 }
